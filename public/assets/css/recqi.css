@@ -1,0 +1,169 @@
+/** ********************************************** **
+	@Author			Patrick Hallinan
+	@Website		n/a
+	@Last Update	2/26/2015
+
+	TABLE CONTENTS
+	-------------------------------
+		01. Globals
+
+
+*************************************************** **/
+
+
+/** 01. Globals
+ **************************************************************** **/
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background-color:#8E8E8E;
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: 'MyWebFont';
+    src:
+    url('myfont2.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
+    url('myfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* LAYOUT HELPERS
+--------------------------------------------------------- */
+.vcenter {
+    display: table;
+    height: 100%;
+    table-layout: fixed;
+}
+.vcenter .vcenter-this {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* BOXED LAYOUT
+--------------------------------------------------------- */
+
+.boxed-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .boxed-wrapper {
+        max-width: 810px; }
+    .boxed-wrapper .container {
+        max-width: 750px !important;
+        width: auto !important; }
+    .boxed-wrapper .boxed-max-w {
+        max-width: 810px; }
+}
+@media (min-width: 992px) {
+    .boxed-wrapper {
+        max-width: 1030px; }
+    .boxed-wrapper .boxed-max-w {
+        max-width: 1030px; }
+    .boxed-wrapper .container {
+        max-width: 970px !important;
+        width: auto !important; }
+}
+@media (min-width: 1200px) {
+    .boxed-wrapper {
+        max-width: 1230px; }
+    .boxed-wrapper .boxed-max-w {
+        max-width: 1230px; }
+    .boxed-wrapper .container {
+        max-width: 1170px !important;
+        width: auto !important; }
+}
+
+/* TOP SEARCH CONTAINER
+--------------------------------------------------------- */
+
+.top-bar {
+    height: 60px;
+    background-color: #FFF;
+}
+
+.search-grey-container {
+    height: 250px;
+    background-color: #3E4348;
+    -webkit-box-shadow: inset 0px 15px 25px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: inset 0px 15px 25px 0px rgba(0,0,0,0.4);
+    box-shadow: inset 0px 15px 25px 0px rgba(0,0,0,0.4);
+}
+
+.search-box-conatiner {
+    margin: 20px 100px;
+}
+
+.give-start-text {
+    font-family: Futura Light BT;
+    font-size: 19pt;
+    color: #ccc;
+    font-stretch: expanded;
+}
+
+
+
+
+/* MAIN NAVIGATION MENU
+--------------------------------------------------------- */
+
+ul#main-nav li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    position: relative;
+    display: inline;
+}
+
+ul#main-nav li.plan {
+    width: 147px;
+    height: 40px;
+    background: url('/assets/img/nav/plan.png') 0 0;
+}
+
+ul#main-nav li.care {
+    margin-left: -65px;
+    width: 199px;
+    height: 40px;
+    background: url('/assets/img/nav/care.png') 0 0;
+}
+ul#main-nav li.care.active {
+    z-index: 1;
+    background: url('/assets/img/nav/care.png') 0 40px;
+}
+
+ul#main-nav li.rent {
+    margin-left: -65px;
+    width: 199px;
+    height: 40px;
+    background: url('/assets/img/nav/rent.png') 0 0;
+}
+ul#main-nav li.train {
+    margin-left: -65px;
+    width: 199px;
+    height: 40px;
+    background: url('/assets/img/nav/train.png') 0 0;
+}
+ul#main-nav li.join {
+    margin-left: -65px;
+    width: 199px;
+    height: 40px;
+    background: url('/assets/img/nav/join.png') 0 0;
+}
+ul#main-nav li.services {
+    margin-left: -65px;
+    width: 199px;
+    height: 40px;
+    background: url('/assets/img/nav/services.png') 0 0;
+}
