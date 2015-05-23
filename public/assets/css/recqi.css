@@ -28,13 +28,6 @@ body {
     padding:0;
 }
 
-@font-face {
-    font-family: 'MyWebFont';
-    src:
-    url('myfont2.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
-    url('myfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 
 /* LAYOUT HELPERS
 --------------------------------------------------------- */
@@ -84,6 +77,33 @@ body {
         width: auto !important; }
 }
 
+/* HEADER BLOCK
+--------------------------------------------------------- */
+.header-block {
+    position: relative;
+    margin: 0;
+}
+
+/* TOP RIGHT USER INFORMATION
+--------------------------------------------------------- */
+
+table.top-user-info .col-name {
+    padding: 0 10px;
+    border-right: 2px solid lightgrey;
+    font-weight: bold;
+}
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: lightgray;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px
+}
+table.top-user-info .col-profile-arrow {
+    padding: 0 15px;
+}
+
 /* TOP SEARCH CONTAINER
 --------------------------------------------------------- */
 
@@ -93,8 +113,8 @@ body {
 }
 
 .search-grey-container {
-    height: 250px;
-    background-color: #3E4348;
+    height: 375px;
+    background-color: #3e4348;
     -webkit-box-shadow: inset 0px 15px 25px 0px rgba(0,0,0,0.4);
     -moz-box-shadow: inset 0px 15px 25px 0px rgba(0,0,0,0.4);
     box-shadow: inset 0px 15px 25px 0px rgba(0,0,0,0.4);
@@ -105,20 +125,91 @@ body {
 }
 
 .give-start-text {
-    font-family: Futura Light BT;
-    font-size: 19pt;
+    margin-bottom: 10px;
+    font-family: FuturaBT-Light;
+    font-size: 16pt;
     color: #ccc;
-    font-stretch: expanded;
+    letter-spacing: 4px;
+}
+.flying {
+    font-family: FilmotypeHorizon;
+    font-size: 30pt;
+    color: #fcfcfc;
+}
+
+.search-container-middle {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 150px;
+}
+
+.search-container-top {
+    position: relative;
+    top: 13px;
+    left: 12px;
+    padding: 10px 0;
+    background-color: #fcfcfc;
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    -webkit-box-shadow: 3px 3px 7px 3px rgba(0,0,0,0.7);
+    -moz-box-shadow: 3px 3px 7px 3px rgba(0,0,0,0.7);
+    box-shadow: 3px 3px 7px 3px rgba(0,0,0,0.7);
+}
+
+.search-orange-text {
+    margin-bottom: 15px;
+    font-family: CrawModURW-Reg;
+    font-size: 14pt;
+    color: #eb6843;
+}
+
+input[name=search_depart]::-webkit-input-placeholder {
+    font-family: Cassia-Italic;
+}
+input[name=search_depart]::-moz-placeholder {
+    font-family: Cassia-Italic;
+}
+input[name=search_depart]:-ms-input-placeholder {
+    font-family: Cassia-Italic;
+}
+
+.search-recqi-btn {
+    margin: 10px auto;
+    width: 143px;
+    height: 35px;
+    background: url('/assets/img/buttonsSearch.png') 0 71px;
 }
 
 
+/** ION SLIDER COLOR OVERRIDES **/
+.irs {
+    font-family: FuturaBT-Book;
+}
+
+.irs-bar {
+    border-top: 1px solid #759e9c;
+    border-bottom: 1px solid #759e9c;
+    background: #759e9c;
+}
+.irs-bar-edge {
+    border: 1px solid #759e9c;
+    background: #759e9c;
+}
+.irs-from, .irs-to, .irs-single {
+    background: #759e9c;
+}
 
 
 /* MAIN NAVIGATION MENU
 --------------------------------------------------------- */
+ul#main-nav {
+    height: 29px;
+}
 
 ul#main-nav li {
     margin: 0;
+    margin-left: -40px;
     padding: 0;
     float: left;
     list-style: none;
@@ -127,43 +218,355 @@ ul#main-nav li {
 }
 
 ul#main-nav li.plan {
-    width: 147px;
+    width: 148px;
     height: 40px;
-    background: url('/assets/img/nav/plan.png') 0 0;
+    background: url('/assets/img/nav/plan.png') 0 40px;
 }
 
 ul#main-nav li.care {
     margin-left: -65px;
-    width: 199px;
+    width: 201px;
     height: 40px;
-    background: url('/assets/img/nav/care.png') 0 0;
+    background: url('/assets/img/nav/care.png') 0 40px;
 }
 ul#main-nav li.care.active {
     z-index: 1;
-    background: url('/assets/img/nav/care.png') 0 40px;
+    background: url('/assets/img/nav/care.png') 0 0;
 }
 
 ul#main-nav li.rent {
     margin-left: -65px;
-    width: 199px;
+    width: 201px;
     height: 40px;
-    background: url('/assets/img/nav/rent.png') 0 0;
+    background: url('/assets/img/nav/rent.png') 0 40px;
 }
 ul#main-nav li.train {
     margin-left: -65px;
-    width: 199px;
+    width: 201px;
     height: 40px;
-    background: url('/assets/img/nav/train.png') 0 0;
+    background: url('/assets/img/nav/train.png') 0 40px;
 }
 ul#main-nav li.join {
     margin-left: -65px;
-    width: 199px;
+    width: 201px;
     height: 40px;
-    background: url('/assets/img/nav/join.png') 0 0;
+    background: url('/assets/img/nav/join.png') 0 40px;
 }
 ul#main-nav li.services {
     margin-left: -65px;
-    width: 199px;
+    width: 201px;
     height: 40px;
-    background: url('/assets/img/nav/services.png') 0 0;
+    background: url('/assets/img/nav/services.png') 0 40px;
+}
+
+/* CONTENT AREA
+--------------------------------------------------------- */
+
+.discover-activity-logbook {
+    background-color: #515151;
+    height: 50px;
+    width: 100%;
+}
+
+/* CARD STYLING
+--------------------------------------------------------- */
+.card-container {
+    position: relative;
+    height: 460px;
+    width: 230px;
+    background-color: #bababa;
+}
+.card-container .listing-image {
+    height: 230px;
+}
+
+.card-container .listing-title-container {
+    height: 140px;
+    background-color: #3e4348;
+}
+
+.card-container .listing-title-container .title {
+    padding: 20px 10px 10px 10px;
+    font-family: FuturaBT-Light;
+    font-size: 18pt;
+    color: #fff;
+    height: 105px;
+    line-height: 20pt;
+}
+.card-container .listing-title-container .status-rating-container {
+    height: 35px;
+    border-top: 1px solid #da8448;
+}
+
+.hlinks {
+    line-height: 1;
+    zoom: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.hlinks > li {
+    display: inline-block;
+    font-size: 13px;
+}
+.hlinks > li > a {
+    display: block;
+    line-height: 1;
+}
+
+.hlinks.card-icons {
+    margin: 7px 10px;
+}
+.hlinks.card-feature-icons {
+    margin: 2px 0;
+}
+
+i.icon-bookmark {
+    display: inline-block;
+    background: url('/assets/img/cards/icons/basicBookmarkOn.png') 0 0;
+    background-size: 100%;
+    width: 19px;
+    height: 19px;
+}
+i.icon-visited {
+    display: inline-block;
+    background: url('/assets/img/cards/icons/basicVistedOff.png') 0 0;
+    background-size: 100%;
+    width: 14px;
+    height: 19px;
+}
+i.icon-favorite {
+    display: inline-block;
+    background: url('/assets/img/cards/icons/basicFavoriteOff.png') 0 0;
+    background-size: 100%;
+    width: 22px;
+    height: 19px;
+}
+
+i.icon-star {
+    display: inline-block;
+    background-size: 100%;
+}
+i.icon-star.full {
+    width: 19px;
+    height: 18px;
+    background: url('/assets/img/cards/icons/starOn.png') 0 0;
+}
+i.icon-star.half {
+    width: 20px;
+    height: 19px;
+    background: url('/assets/img/cards/icons/starHalf.png') 0 0;
+}
+i.icon-star.off {
+    width: 19px;
+    height: 19px;
+    background: url('/assets/img/cards/icons/starOff.png') 0 0;
+}
+
+
+.card-container .listing-loc-features {
+    height: 90px;
+    background-color: #FFFFFF;
+    padding: 5px 10px;
+}
+
+.card-container .listing-loc-features .listing-distance {
+    font-family: FuturaBT-Medium;
+    font-size: 10pt;
+    color: #db8448;
+    font-weight: bold;
+}
+.card-container .listing-loc-features .milesfrom {
+    font-family: FuturaBT-Medium;
+    font-size: 10pt;
+    color: #db8448;
+    font-weight: normal;
+}
+
+.card-container > .listing-loc-features > .listing-location {
+    font-family: FuturaBT-Medium;
+    font-size: 10pt;
+    color: #3f4348;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #fff;
+    position: relative;
+}
+.card-container > .listing-loc-features > .listing-location:after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    top: 0; right: 0;
+
+    background-image: -webkit-linear-gradient(right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 50%);
+    background-image: -moz-linear-gradient(right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 50%);
+    background-image: -ms-linear-gradient(right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 50%);
+    background-image: -o-linear-gradient(right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 50%);
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 50%);
+}
+
+.recqi-btn-container {
+    position: absolute;
+    top: 210px;
+    left: 10px;
+    z-index: 5;
+}
+.recqi-btn-container .card-recqi-btn {
+    height: 35px;
+    width: 91px;
+    background: url('/assets/img/recqi-buttons.svg') 0 0;
+}
+
+.recqi-btn-container .card-recqi-numberof {
+    margin-left: 2px;
+    padding: 8px 15px 8px 15px;
+    background-color: #FFFFFF;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family: FilmotypeHorizon;
+    font-size: 16pt;
+    color: #eb6844;
+}
+
+.listing-features {
+    padding: 5px 0 0 0;
+    text-align: center;
+}
+i.icon-card-airport {
+    display: inline-block;
+    margin: 0 5px;
+    width: 26px;
+    height: 26px;
+    background: url('/assets/img/cards/icons/basicTypeAirport.png');
+}
+i.icon-card-heliport {
+    display: inline-block;
+    margin: 0 5px;
+    width: 26px;
+    height: 26px;
+    background: url('/assets/img/cards/icons/basicTypeHeliport.png');
+}
+i.icon-card-seaport {
+    display: inline-block;
+    margin: 0 3px;
+    width: 26px;
+    height: 26px;
+    background: url('/assets/img/cards/icons/basicTypeSeaport.png');
+}
+i.icon-card-tower {
+    display: inline-block;
+    margin: 0 3px;
+    width: 26px;
+    height: 25px;
+    background: url('/assets/img/cards/icons/basicTowerOn.png');
+ }
+i.icon-card-tower.off {
+    background: url('/assets/img/cards/icons/basicTowerOff.png');
+}
+i.icon-card-approach {
+    display: inline-block;
+    margin: 0 3px;
+    width: 25px;
+    height: 26px;
+    background: url('/assets/img/cards/icons/basicApproachesOn.png');
+}
+i.icon-card-approach.off {
+    background: url('/assets/img/cards/icons/basicApproachesOff.png');
+}
+i.icon-card-fuel {
+    display: inline-block;
+    margin: 0 3px;
+    width: 20px;
+    height: 26px;
+    background: url('/assets/img/cards/icons/basicFuelOn.png');
+}
+i.icon-card-fuel.off {
+    background: url('/assets/img/cards/icons/basicFuelOff.png');
+}
+i.icon-card-car {
+    display: inline-block;
+    margin: 0 3px;
+    width: 26px;
+    height: 23px;
+    background: url('/assets/img/cards/icons/basicCarOn.png');
+}
+i.icon-card-car.off {
+    background: url('/assets/img/cards/icons/basicCarOff.png');
+}
+i.icon-card-food {
+    display: inline-block;
+    margin: 0 3px;
+    width: 26px;
+    height: 26px;
+    background: url('/assets/img/cards/icons/basicFoodOn.png');
+}
+i.icon-card-food.off {
+    background: url('/assets/img/cards/icons/basicCarOff.png');
+}
+
+/**
+* SEARCH FILTERS LEFT COLUMN */
+
+.search-top-title {
+    padding: 20px 0;
+    font-family: CrawModURW-Reg;
+    font-size: 14pt;
+    color: #3e4348;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+.search-top-title .sortby {
+    font-family: FuturaBT-Medium;
+    font-size: 10pt;
+}
+.search-top-title .rating {
+    font-family: FuturaBT-Medium;
+    font-size: 10pt;
+    color: #759e9c;
+    margin: 0px 10px;
+}
+
+.search-filters-left-col-container {
+    margin: 0px 0px;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+dt.commondt {
+    font-family: FuturaBT-Bold;
+    font-size: 10pt;
+    color: #eb6843;
+    line-height: 20pt;
+    letter-spacing: 1px;
+}
+
+dd.bluedd-title {
+     font-family: FuturaBT-Medium;
+     font-size: 10pt;
+     color: #759e9c;
+     line-height: 20pt;
+}
+dd.bluedd-item {
+    font-family: FuturaBT-Medium;
+    font-size: 10pt;
+    color: #759e9c;
+    line-height: 20pt;
+}
+
+dd.commondd {
+    font-family: FuturaBT-Book;
+    font-size: 10pt;
+    color: #3e4348;
+    line-height: 0pt;
+}
+dd.commondd .form-group {
+    margin-bottom: 5px;
+}
+dd.commondd .form-group input[type=checkbox] {
+    margin-right: 8px;
 }
